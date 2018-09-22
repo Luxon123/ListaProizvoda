@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table id="proizvodi" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Artikal</th>
+            <th>Sifra</th>
+            <th>Opis</th>
+            <th>Kategorija</th>
+            <th>Proizvodjac</th>
+            <th>Dobavljac</th>
+            <th>Cena</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+
+            var table = $('#proizvodi').DataTable({
+                ajax: {
+                    contentType: 'application/json',
+                    type: "GET",
+                    url: "/api/proizvodi",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "naziv",
+                    },
+                    {
+                        data: "id",
+                    },
+                    {
+                        data: "opis",
+                    },
+                    {
+                        data: "kategorija",
+                    },
+                    {
+                        data: "proizvodjac",
+                    },
+                    {
+                        data: "dobavljac",
+                    },
+                    {
+                        data: "cena",
+                    }
+                ]
+            });
+
+
+        });
+
+
+    </script>
+    
+    
+    }
