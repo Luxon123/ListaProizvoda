@@ -1,1 +1,2 @@
 # Aplikacija koja prikazuje listu proizvoda, poseduje mogucnost unosa novih proizvoda(izborom stranice NEW na pocetnoj web strani) kao i izmene parametara postojecih proizvoda(izborom stranice EDIT na pocetnoj stranici).
+Aplikacija je povezena na bazu, aplikacija ima web servise(APIs) kojima je omgocena komunikacija sa bazom od strane klijenta koji podrzavaju CRUD operacije. Korisnik koristi aplikaciju preko strana opisanih u prvom delu ovog teksta.
